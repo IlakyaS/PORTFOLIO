@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/c306293420.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="bg"></div>
+    
+            <nav>
+                <div class="logo"> <img src="logo3.png">DOGGY KENNEL</div>
+                <ul>
+                    <li> <a href="#">ABOUT </a></li>
+                    <li> <a href="#">ADOPTION</a></li>
+                    <li> <a href="#">DONATION</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>                
+            </nav>
+            
+            <div class="home-text">
+                <h2 class="sl">Saving Lives</h2><br>
+                <h1 class="swy">STARTS WITH YOU..!</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--.......................about...............-->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="clm1">
+                    <img src="dogadopimg.jpg">
+                </div>
+                <div class="clm2">
+                    <h1>About Us</h1>
+                    <p>Doggy Kennel consists of 100 wonderful volunteers 
+                        who are dedicated to help all animals in need. We
+                         help neglected, sick, and homeless dogs. Speaking of Doggy,
+                          Outreach missions are held on the first and third Saturday
+                           of every month. During our missions, sick and injured animals
+                            are taken in and others are fed.</p>
+                    
+                    <div class="tabs">
+                        <h3 class="tablink activelink" onclick="opentab('success')">LIVES SAVED</h3>
+                        <h3 class="tablink" onclick="opentab('adopted')">ADOPTED</h3>
+                    </div>
+
+                    <div class="tabcont activecont" id="success">
+                        <h1>180 +</h1>
+                    </div>
+                    <div class="tabcont" id="adopted">
+                        <h1>200 +</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+
+         <!--.......................adoption...............-->
+
+
+    <div id="adoption">
+        <div class="container">
+            <h1 class="adoptiontitle">Adoption</h1>
+            <div class="adoplist">
+                <div>
+                    <i class="fa-solid fa-shield-dog"></i> 
+                    <h2>Adoption Process</h2>
+                    <p>If you are interested in Adopting one of our animals please fill out our online adoption application.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div> 
+                    <i class="fa-solid fa-print"></i>
+                    <h2>Application</h2>
+                    <p>Form to be filled for adoption. Once the adoption application is received it will be reviewed you will bw contacted, 
+                        we then set up a “meet and greet” for you to meet the pet.</p>
+                </div>
+                <div> 
+                    <i class="fa-solid fa-hand"></i>
+                    <h2>Volunteers</h2>
+                    <p>If you are interested to be the part of this wonderful journey, please fill the below form.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+     <script>
+        var tablinks =document.getElementsByClassName("tablink");
+        var tabconts =document.getElementsByClassName("tabcont");
+
+        function opentab(tabname){
+            for(tabl of tablinks){
+                tabl.classList.remove("activelink");
+            }
+            for(tabc of tabconts){
+                tabc.classList.remove("activecont");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("activecont");
+        }
+     </script>
+</body>
+    
+</html>
