@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+   scroll-behavior: smooth;
+}
 body{
     background-color: black;
     
@@ -34,11 +38,13 @@ body{
     
 }
 nav{
-    width: 100%;
+    
     display: flex;
-    align-items: center;
+    max-width: 100%;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    
+    
     
     
 }
@@ -52,22 +58,18 @@ nav{
     
     
 }
+
+
 nav ul{
     
-    position: absolute;
-    right: 12%;
-    display: flex;
-    justify-content: right;
-    float: right;
-    
+    position: relative;
+   
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 40px;
-    justify-content: left;
-    
+    margin: 10px 80px;
     padding-right: 0px;
     
 }
@@ -251,11 +253,11 @@ nav ul li{
  }
  .adoplist a{
    text-decoration: none;
-   color: turquoise;
+   color: rgb(146, 228, 220);
    padding-left: 10px;
     }
 
-/* *************adoption******************** */
+/* *************donation******************** */
 #donation{
    padding: 100px 50px;  
    background-color: black;
@@ -279,7 +281,7 @@ nav ul li{
 }
  .donate img{
    width: 100%;
-   height: 500px;
+   height: 600px;
    opacity: 1; 
    border-radius: 20px;
    overflow: hidden;
@@ -288,11 +290,11 @@ nav ul li{
  }
  .layer{
    width: 99%; 
-   height: 93.5%;  
+   height: 0;  
    position: absolute;
    background-image: linear-gradient(rgba(0,0,0,0.7),rgb(11, 147, 133));
    border-radius: 20px;
-   display: none;
+   display: flex;
    justify-content: center;
    align-items: center;
    color: white;
@@ -301,7 +303,7 @@ nav ul li{
    font-family: sans-serif;
    font-weight: 900;
    overflow: hidden;
-   transition: 0.5s;
+   transition: 0.5s ease;
     
  }
 
@@ -314,9 +316,270 @@ nav ul li{
 
 .donate:hover img{
    
-   transform: scale(1.01);
+   transform: scale(1.001);
    
 }
 .donate:hover .layer{
-   display: flex;
+   height: 93.5%;
+}
+
+.donate a:hover{
+   opacity: 0.7;
+   
+}
+.btn{
+   display: block;
+   margin: 20px auto;
+   width: fit-content;
+   border: 1px solid aqua;
+   border-radius: 6px;
+   padding: 14px 50px;
+   text-decoration: none;
+   font-size: 25px;
+   color: white;
+   font-family: sans-serif;
+   font-weight: 500;
+   transition: 0.5s;
+}
+.btn:hover{
+   background-color: #06a19c;
+}
+
+/* -------------------------------contact----------------------- */
+
+.contact-left {
+   flex-basis: 35%;
+   color: #04fff7;
+   font-family: sans-serif;
+   font-size: 30px;
+   line-height: 50px;
+   background-color: black;
+   margin: 30px;
+   padding: 50px;
+   
+   line-height: 50px;
+}
+
+.contact-right{
+   flex-basis: 50%;
+   background-color: black;
+   margin: 30px;
+}
+
+.conttitle{
+   color: white;
+   margin: 30px 0;
+   font-family: sans-serif;
+    font-size: 40px;
+    
+   
+}
+
+.smicon{
+   margin-top: 30px;
+   
+  }
+  
+
+.smicon a{
+text-decoration: none;
+font-size: 30px;
+margin-right: 15px;
+color: #04fff7;
+transition: 0.5s;
+display:inline-block;
+}
+
+.smicon a:hover{
+   color:white;
+   transform: translateY(-5px);
+}
+
+
+form input, form textarea{
+   width: 90%;
+   border: 0;
+   outline: none;
+   background: #262626;
+   padding: 15px;
+   margin: 15px 30px;
+   color: whitesmoke;
+   font-size: 20px;
+   border-radius: 6px;
+   
+}
+.contact-right .sbtn{
+   display: block;
+   margin: 40px auto;
+   width: fit-content;
+   border: 1px solid aqua;
+   border-radius: 6px;
+   padding: 14px 50px;
+   text-decoration: none;
+   font-size: 25px;
+   color:white;
+   font-family: sans-serif;
+   font-weight: 500;
+   transition: 0.5s;
+   background-color: black;
+}
+.sbtn:hover{
+   transform: scale(1.1);
+}
+
+.copyright{
+   width: 100%;
+   text-align: center;
+   padding: 25px 0;
+   margin-top: 20px;
+   background-color: #262626;
+   font-weight: 300;
+   color: bisque;
+   letter-spacing: 5px;
+
+}
+.copyright i{
+   color: #04fff7;
+}
+
+
+/* --------------------responsive------------ */
+
+nav .fa-solid{
+   display: none;
+   color: bisque;
+   
+   
+}
+
+
+
+@media only screen and (max-width: 600px) {
+   nav .logo{
+      width: 50px;
+      height: 50px;
+      margin-top: 15px;
+   }
+
+   .home-text h2{
+      font-size: 22px;
+   }
+   .home-text .swy{
+      font-size: 22px;
+   }
+   .home-text{
+      margin-top: 40%;
+   }
+
+   nav .fa-solid{
+      display: block;
+      color: white;
+   }
+   nav ul{
+      background-color: #04fff7;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 500px;
+      padding-top: 50px;
+      display: block;
+      color: black;
+      transition: 0.5s;
+   }
+   nav ul li{
+      display: block;
+      margin: 25px;
+      
+      
+   }
+
+   nav ul li a{
+      color: black;
+      font-size: 14px;
+   }
+   nav ul .fa-solid{
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+      color: black;
+   }
+
+   .container{
+      margin: 0;
+      width: 100%;
+   }
+   .clm1, .clm2{
+      flex-basis: 100%;
+   }
+   .clm1 img{
+      width: 100%;
+      margin-bottom: 20px;
+   }
+   .clm2 h1{
+      font-size: 20px;
+   }
+   .clm2 p{
+      font-size: 16px;
+      line-height: 30px;
+
+   }
+   .tabs .tablink{
+      font-size: 17px;
+   }
+   .adoptiontitle{
+      font-size: 20px;
+   }
+   .adoplist div{
+      font-size: 16px;
+      line-height: 30px;
+      padding: 10px;
+   }
+   .adoplist i{
+      font-size: 20px;
+   }
+   .dontitle{
+      font-size: 20px;
+   }
+   .donate{
+      margin: 0%;
+   }
+   .donate img{
+      height: 300px;
+      width: 700px;
+   }
+   .layer{
+      width: 700px;
+      font-size: 10px;
+      line-height: 20px;
+      border-radius: 20px;
+      height: 0;
+   }
+   .btn{
+      font-size: 16px;
+      padding: 10px 25px;
+   }
+   .contact-left, .contact-right{
+      flex-basis: 100%;
+   }
+   .contact-left{
+      font-size: 16px;
+      padding: 25px;
+   }
+   .contact-right{
+      margin: 20px;
+   }
+   .conttitle{
+      font-size: 20px;
+   }
+   .contact-right .sbtn{
+      font-size: 16px;
+      padding: 10px 25px;
+   }
+   .copyright{
+      letter-spacing: 2px;
+      font-weight: 200;
+      
+   }
 }

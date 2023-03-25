@@ -15,15 +15,18 @@
     
             <nav>
                 <div class="logo"> <img src="logo3.png">DOGGY KENNEL</div>
-                <ul>
-                    <li> <a href="#">ABOUT </a></li>
-                    <li> <a href="#">ADOPTION</a></li>
-                    <li> <a href="#">DONATION</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>                
+                <ul id="sidemenu">
+                    <li> <a href="#about">ABOUT </a></li>
+                    <li> <a href="#adoption">ADOPTION</a></li>
+                    <li> <a href="#donation">DONATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>       
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>         
             </nav>
             
-            <div class="home-text">
+
+            <div class="home-text"> 
                 <h2 class="sl">Saving Lives</h2><br>
                 <h1 class="swy">STARTS WITH YOU..!</h1>
             </div>
@@ -81,7 +84,7 @@
                 <div> 
                     <i class="fa-solid fa-print"></i>
                     <h2>Application</h2>
-                    <p>Form to be filled for adoption. Once the adoption application is received it will be reviewed you will bw contacted, 
+                    <p><a href="application.png" download>Form</a> to be filled for adoption. Once the adoption application is received it will be reviewed you will bw contacted, 
                         we then set up a “meet and greet” for you to meet the pet.</p>
                 </div>
                 <div> 
@@ -107,8 +110,51 @@
                     </p>
                 </div>
             </div>
+            <a href="#" class="btn">See more</a>
         </div>
     </div>
+
+    <!-- ---------------------------------CONTACT------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="conttitle"> Contact me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i> contactdoggy@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 0421-2322307</p>
+                    <div class="smicon">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="sbtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Doggy. Made with <i class="fa-sharp fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
      <script>
         var tablinks =document.getElementsByClassName("tablink");
@@ -125,6 +171,20 @@
             document.getElementById(tabname).classList.add("activecont");
         }
      </script>
+
+
+
+<script>
+
+    var sidemenu= document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
 </body>
     
 </html>
